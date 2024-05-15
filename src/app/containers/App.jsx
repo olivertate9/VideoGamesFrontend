@@ -16,6 +16,8 @@ import Loading from 'components/Loading';
 import LoginPage from 'pageProviders/Login';
 import PageContainer from 'pageProviders/components/PageContainer';
 import pageURLs from 'constants/pagesURLs';
+import GameListPage from 'pageProviders/GameList';
+import GameDetailsPage from 'pageProviders/GameDetails';
 import SecretPage from 'pageProviders/Secret';
 import ThemeProvider from 'misc/providers/ThemeProvider';
 import UserProvider from 'misc/providers/UserProvider';
@@ -71,6 +73,18 @@ function App() {
                 )}
                 {!isFetchingUser && (
                   <Routes>
+                    <Route
+                        element={<GameListPage />}
+                        path={`${pageURLs[pages.gameListPage]}`}
+                    />
+                    <Route
+                        element={<GameDetailsPage />}
+                        path={`${pageURLs[pages.gameDetailsPage]}`}
+                    />
+                    <Route
+                        element={<GameDetailsPage />}
+                        path={`${pageURLs[pages.gameDetailsPage]}/new`}
+                    />
                     <Route
                       element={<DefaultPage />}
                       path={`${pageURLs[pages.defaultPage]}`}

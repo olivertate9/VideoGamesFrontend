@@ -1,0 +1,15 @@
+{
+  "title": "Строрінка з іграми",
+  "delete-game-question": "Видалити цю гру?",
+  "question-sure": "Ви впевнені, що хочете видалити гру?",
+  "cancel-deletion": "Скасувати",
+  "confirm-deletion": "Видалити",
+  "snackbar-message": "Гра була успішно видалена",
+  "snackbar-error-message": "Помилка під час видалення: ",
+  "add-game": "Додати гру",
+  "loading": "Завантаження...",
+  "filter": "Фільтри",
+  "dev-id": "ID Розробника",
+  "year-released": "Рік випуску гри",
+  "apply-filters": "Застосувати фільтри"
+}

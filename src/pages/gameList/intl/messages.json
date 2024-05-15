@@ -1,0 +1,16 @@
+{
+  "title": "List of games",
+  "delete-game-question": "Delete this game?",
+  "question-sure": "Are you sure you want to delete the game?",
+  "cancel-deletion": "Cancel",
+  "confirm-deletion": "Delete",
+  "snackbar-message": "Game was successfully deleted",
+  "snackbar-error-message": "Error deleting: ",
+  "add-game": "Add Game",
+  "loading": "Loading...",
+  "filter": "Filters",
+  "dev-id": "Developer ID",
+  "year-released": "Year released",
+  "apply-filters": "Apply filters"
+
+}

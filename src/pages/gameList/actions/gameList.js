@@ -61,34 +61,34 @@ const deleteGameById = async (gameId) => {
 
 // Завантаження мокових даних. Я зміг замокати тільки завантаження даних.
 // Видалення, фільтри та перехід до детальної інформації не зміг симулювати. З бекендом все працює.
-const fetchGames = (filters, page) => async (dispatch) => {
-    dispatch(fetchGamesRequest());
-
-    const currentPage = page - 1;
-    const games = mockGamePages[currentPage] || [];
-    const totalPages = mockGamePages.length;
-
-    dispatch(fetchGamesSuccess(games, totalPages));
-};
-
-// Виклик до бекенду
 // const fetchGames = (filters, page) => async (dispatch) => {
 //     dispatch(fetchGamesRequest());
 //
-//     const defaultParams = {
-//         page: page || 1,
-//         size: 10,
-//     };
+//     const currentPage = page - 1;
+//     const games = mockGamePages[currentPage] || [];
+//     const totalPages = mockGamePages.length;
 //
-//     const params = { ...defaultParams, ...filters };
-//     return getGames(params)
-//         .then((response) => {
-//             dispatch(fetchGamesSuccess(response.games, response.totalPages));
-//         })
-//         .catch((error) => {
-//             dispatch(fetchGamesFailure(error.description));
-//         });
+//     dispatch(fetchGamesSuccess(games, totalPages));
 // };
+
+// Виклик до бекенду
+const fetchGames = (filters, page) => async (dispatch) => {
+    dispatch(fetchGamesRequest());
+
+    const defaultParams = {
+        page: page || 1,
+        size: 10,
+    };
+
+    const params = { ...defaultParams, ...filters };
+    return getGames(params)
+        .then((response) => {
+            dispatch(fetchGamesSuccess(response.games, response.totalPages));
+        })
+        .catch((error) => {
+            dispatch(fetchGamesFailure(error.description));
+        });
+};
 
 
 const deleteGame = (gameId) => async (dispatch) => {

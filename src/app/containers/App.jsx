@@ -78,7 +78,7 @@ function App() {
                         <div style={{ textAlign: 'center', padding: '20px', background: '#f8d7da', color: '#721c24' }}>
                           <h2>Unauthorized</h2>
                           <p>You need to login to access this content.</p>
-                          <button onClick={() => window.location.href = 'https://ec2-13-53-173-115.eu-north-1.compute.amazonaws.com:443/oauth/authenticate'}>
+                          <button onClick={() => window.location.href = 'https://13.53.173.115:443/oauth/authenticate'}>
                             Login
                           </button>
                           <button onClick={handleCloseLoginMessage}>

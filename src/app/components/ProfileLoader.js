@@ -15,7 +15,7 @@ const ProfileLoader = ({ onUnauthorized }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await instance.get('https://ec2-13-53-173-115.eu-north-1.compute.amazonaws.com:443/api/profile');
+                const response = await instance.get('https://13.53.173.115:443/api/profile');
                 console.log(response.data);
             } catch (error) {
                 if (error.response && error.response.status === 401) {

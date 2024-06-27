@@ -15,7 +15,7 @@ const ProfileLoader = ({ onUnauthorized }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await instance.get('https://videogames-load-balancer-1719973211.eu-north-1.elb.amazonaws.com/api/profile');
+                const response = await instance.get('http://localhost:1000/api/profile');
                 console.log(response.data);
             } catch (error) {
                 if (error.response && error.response.status === 401) {

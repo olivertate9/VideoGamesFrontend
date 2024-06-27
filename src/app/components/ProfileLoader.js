@@ -15,7 +15,7 @@ const ProfileLoader = ({ onUnauthorized }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await instance.get('http://13.53.173.115:1000/api/profile');
+                const response = await instance.get('https://13.53.173.115:1000/api/profile');
                 console.log(response.data);
             } catch (error) {
                 if (error.response && error.response.status === 401) {
